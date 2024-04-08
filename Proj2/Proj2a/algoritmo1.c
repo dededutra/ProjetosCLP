@@ -1,7 +1,6 @@
 //André Dutra da Silva
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 // Função para analisar a palavra
 int analisarPalavra(char palavra[]) {
