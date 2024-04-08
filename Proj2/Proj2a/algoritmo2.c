@@ -1,6 +1,7 @@
 //André Dutra da Silva
 #include <stdio.h>
 #include <stdlib.h>
+#inclyde <ctype.h> 
 
 int analisarDecimal(char palavra[]) {
     int i = 0;
