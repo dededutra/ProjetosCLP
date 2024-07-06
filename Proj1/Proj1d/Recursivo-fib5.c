@@ -1,4 +1,9 @@
 // André Dutra da Silva
+// p-code.cpp :  cpp.sh
+//
+// C conventions
+// 0 == FALSE
+//
 #include <stdio.h>
 
 #define levmax 3
