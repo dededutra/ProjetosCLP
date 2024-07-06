@@ -2,7 +2,7 @@ package projeto1;
 
 import java.util.Random;
 
-public class proj1a {
+public class Proj1a {
 
     static final int TAM = 100;
     static final int NUM = 1024;
