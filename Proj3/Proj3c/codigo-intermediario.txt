@@ -1,0 +1,122 @@
+?expr(['(',3,+,45,')',-,6,+,3,*,1],[]).
+PUSH(3)
+PUSH(45)
+y=POP(); x=POP(); PUSH(x ADD y)
+PUSH(6)
+PUSH(3)
+PUSH(1)
+y=POP(); x=POP(); PUSH(x MUL y)
+y=POP(); x=POP(); PUSH(x ADD y)
+y=POP(); x=POP(); PUSH(x SUB y)
+true
+
+?expr(['(',12,*,34,')',+,77,-,2,+,1],[]).
+PUSH(12)
+PUSH(34)
+y=POP(); x=POP(); PUSH(x MUL y)
+PUSH(77)
+y=POP(); x=POP(); PUSH(x ADD y)
+PUSH(2)
+y=POP(); x=POP(); PUSH(x SUB y)
+PUSH(1)
+y=POP(); x=POP(); PUSH(x ADD y)
+true
+
+?expr(['(',145,*,23,')',-,54,*,3,+,23],[]).
+PUSH(145)
+PUSH(23)
+y=POP(); x=POP(); PUSH(x MUL y)
+PUSH(54)
+PUSH(3)
+y=POP(); x=POP(); PUSH(x MUL y)
+y=POP(); x=POP(); PUSH(x SUB y)
+PUSH(23)
+y=POP(); x=POP(); PUSH(x ADD y)
+true
+
+?expr(['(',34,*,13,'-',73,')',+,6,*,44],[]).
+PUSH(34)
+PUSH(13)
+y=POP(); x=POP(); PUSH(x MUL y)
+PUSH(73)
+y=POP(); x=POP(); PUSH(x SUB y)
+PUSH(6)
+PUSH(44)
+y=POP(); x=POP(); PUSH(x MUL y)
+y=POP(); x=POP(); PUSH(x ADD y)
+true
+
+?expr(['(',23,+,10,')',*,73,-,57,+,11],[]).
+PUSH(23)
+PUSH(10)
+y=POP(); x=POP(); PUSH(x ADD y)
+PUSH(73)
+y=POP(); x=POP(); PUSH(x MUL y)
+PUSH(57)
+y=POP(); x=POP(); PUSH(x SUB y)
+PUSH(11)
+y=POP(); x=POP(); PUSH(x ADD y)
+true
+
+?expr(['(',5,*,46,'+',34,')',-,6,*,2],[]).
+PUSH(5)
+PUSH(46)
+y=POP(); x=POP(); PUSH(x MUL y)
+PUSH(34)
+y=POP(); x=POP(); PUSH(x ADD y)
+PUSH(6)
+PUSH(2)
+y=POP(); x=POP(); PUSH(x MUL y)
+y=POP(); x=POP(); PUSH(x SUB y)
+true
+
+?expr(['(',9,*,34,')',-,24,+,5,'+',2],[]).
+PUSH(9)
+PUSH(34)
+y=POP(); x=POP(); PUSH(x MUL y)
+PUSH(24)
+PUSH(5)
+y=POP(); x=POP(); PUSH(x ADD y)
+y=POP(); x=POP(); PUSH(x SUB y)
+PUSH(2)
+y=POP(); x=POP(); PUSH(x ADD y)
+true
+
+?expr(['(',23,*,2,')',-,12,'+',80,*,3],[]).
+PUSH(23)
+PUSH(2)
+y=POP(); x=POP(); PUSH(x MUL y)
+PUSH(12)
+PUSH(80)
+PUSH(3)
+y=POP(); x=POP(); PUSH(x MUL y)
+y=POP(); x=POP(); PUSH(x ADD y)
+y=POP(); x=POP(); PUSH(x SUB y)
+true
+
+?expr(['(',11,*,1,'-',11,')',+,34,'+',9],[]).
+PUSH(11)
+PUSH(1)
+y=POP(); x=POP(); PUSH(x MUL y)
+PUSH(11)
+y=POP(); x=POP(); PUSH(x SUB y)
+PUSH(34)
+y=POP(); x=POP(); PUSH(x ADD y)
+PUSH(9)
+y=POP(); x=POP(); PUSH(x ADD y)
+true
+
+?expr(['(',7,*,1,')',+,100,-,4,*,8],[]).
+PUSH(7)
+PUSH(1)
+y=POP(); x=POP(); PUSH(x MUL y)
+PUSH(100)
+y=POP(); x=POP(); PUSH(x ADD y)
+PUSH(4)
+PUSH(8)
+y=POP(); x=POP(); PUSH(x MUL y)
+y=POP(); x=POP(); PUSH(x SUB y)
+true
+
+
+
