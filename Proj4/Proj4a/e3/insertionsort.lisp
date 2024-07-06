@@ -10,7 +10,7 @@
       nil
       (inserir (car lista) (ordenar-insertion (cdr lista)))))
 
-(defun ler-vetor ()
+(defun ler-lista ()
   (let ((lista ()))
     (format t "Digite os elementos da lista:~%")
     (loop
@@ -25,5 +25,5 @@
     (nreverse lista)))
 
 (progn
-  (format t "~a~%" (ordenar-insertion 'ler-vetor))
+  (format t "~a~%" (ordenar-insertion 'ler-lista))
 )
