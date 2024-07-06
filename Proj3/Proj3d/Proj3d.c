@@ -126,19 +126,28 @@ void factor() {
 }
 
 int main() {
+    FILE *file = fopen("expressoes.txt", "r");
+    if (!file) {
+        printf("Error opening file\n");
+        return 1;
+    }
+
     char inputString[10000];
-    fgets(inputString, sizeof(inputString), stdin);
-    for (int i = 0;i< 10000;i++)
-    {
-        if (inputString[i] == '\n') inputString[i] = '\0';
+    while (fgets(inputString, sizeof(inputString), file)) {
+        for (int i = 0; i < 10000; i++) {
+            if (inputString[i] == '\n') inputString[i] = '\0';
+        }
+        input = inputString;
+        top = -1; // Reset stack for each expression
+        printf("INT 0 8\n");
+        nextToken();
+        expr();
+        printf("OPR 0 0\n");
+        if (lookahead != '\0') {
+            printf("Syntax error: unexpected character %c\n", lookahead);
+        }
     }
-    input = inputString;
-    printf("INT 0 8\n");
-    nextToken();
-    expr();
-    printf("OPR 0 0\n");
-    if (lookahead != '\0') {
-        printf("Syntax error: unexpected character %c\n", lookahead);
-    }
+
+    fclose(file);
     return 0;
 }
