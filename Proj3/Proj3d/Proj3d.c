@@ -138,7 +138,7 @@ int main() {
             if (inputString[i] == '\n') inputString[i] = '\0';
         }
         input = inputString;
-        top = -1; // Reset stack for each expression
+        top = -1;
         printf("INT 0 8\n");
         nextToken();
         expr();
