@@ -95,23 +95,23 @@ void rterm() {
 void factor() {
     if (isalpha(lookahead)) {
         if (lookahead == 'a') {
-            printf("LIT 0 3\n");
+            printf("LOD 0 3\n");
             push(lookahead - 'a' + 1);
             nextToken();
         } else if (lookahead == 'b') {
-            printf("LIT 0 4\n");
+            printf("LOD 0 4\n");
             push(lookahead - 'a' + 1);
             nextToken();
         } else if (lookahead == 'c') {
-            printf("LIT 0 5\n");
+            printf("LOD 0 5\n");
             push(lookahead - 'a' + 1);
             nextToken();
         } else if (lookahead == 'd') {
-            printf("LIT 0 6\n");
+            printf("LOD 0 6\n");
             push(lookahead - 'a' + 1);
             nextToken();
         } else if (lookahead == 'e') {
-            printf("LIT 0 7\n");
+            printf("LOD 0 7\n");
             push(lookahead - 'a' + 1);
             nextToken();
         }
