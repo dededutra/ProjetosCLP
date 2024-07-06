@@ -186,43 +186,35 @@ void pcodevhw(){ // begin
 }//end-void-pcmachine() {interpret};
 int main() {
 
-    code[0].f = INT; code[0].l = 0; code[0].a = 5;   // main-INICIO
-    code[1].f = LIT; code[1].l = 0; code[1].a = 4;   // n = 4
-    code[2].f = STO; code[2].l = 0; code[2].a = 3;   // ARI(3)<-n
-    code[3].f = LOD; code[3].l = 0; code[3].a = 3;   //
-    code[4].f = STO; code[4].l = 0; code[4].a = 8;   // t+3; // passing the parameter
+    code[0].f = INT; code[0].l = 0; code[0].a = 5;
+    code[1].f = LIT; code[1].l = 0; code[1].a = 4;
+    code[2].f = STO; code[2].l = 0; code[2].a = 3;
+    code[3].f = LOD; code[3].l = 0; code[3].a = 3;
+    code[4].f = STO; code[4].l = 0; code[4].a = 8;
     code[5].f = LOD; code[5].l = 0; code[5].a = 3;
     code[6].f = STO; code[6].l = 0; code[6].a = 9;
     code[7].f = CAL; code[7].l = 0; code[7].a = 11;
-
-    code[8].f = LOD; code[8].l = 0; code[8].a = 9;   //
-    code[9].f = STO; code[9].l = 0; code[9].a = 4;   // tmp = fat(4)
-    code[10].f = OPR; code[10].l = 0; code[10].a = 0;   // RETURN // main-FIM
-
-    code[11].f = INT; code[11].l = 0; code[11].a = 5; // fat(n)
-    code[12].f = LOD; code[12].l = 0; code[12].a = 3; // push(n)
-    code[13].f = LIT; code[13].l = 0; code[13].a = 1; // push(1)
-    code[14].f = OPR; code[14].l = 0; code[14].a = 8; // push(n==1)
-    code[15].f = JPC; code[15].l = 0; code[15].a = 26; // goto END
-
-    code[16].f = LOD; code[16].l = 0; code[16].a = 3; // push(n)
-    code[17].f = LIT; code[17].l = 0; code[17].a = 1; // push(1)
-    code[18].f = OPR; code[18].l = 0; code[18].a = 3; // push(n-1)
-    code[19].f = STO; code[19].l = 0; code[19].a = 8; // passing the parameter to the (next) recursive CALL
-
+    code[8].f = LOD; code[8].l = 0; code[8].a = 9;
+    code[9].f = STO; code[9].l = 0; code[9].a = 4;
+    code[10].f = OPR; code[10].l = 0; code[10].a = 0;
+    code[11].f = INT; code[11].l = 0; code[11].a = 5;
+    code[12].f = LOD; code[12].l = 0; code[12].a = 3;
+    code[13].f = LIT; code[13].l = 0; code[13].a = 1;
+    code[14].f = OPR; code[14].l = 0; code[14].a = 8;
+    code[15].f = JPC; code[15].l = 0; code[15].a = 26;
+    code[16].f = LOD; code[16].l = 0; code[16].a = 3;
+    code[17].f = LIT; code[17].l = 0; code[17].a = 1;
+    code[18].f = OPR; code[18].l = 0; code[18].a = 3;
+    code[19].f = STO; code[19].l = 0; code[19].a = 8;
     code[20].f = LOD; code[20].l = 0; code[20].a = 8;
     code[21].f = LOD; code[21].l = 0; code[21].a = 4;
     code[22].f = OPR; code[22].l = 0; code[22].a = 4;
     code[23].f = STO; code[23].l = 0; code[23].a = 9;
-    code[24].f = CAL; code[24].l = 0; code[24].a = 11; // CALL fat(n-1)
-
-    code[25].f = JMP; code[25].l = 0; code[25].a = 28; // goto END
-
-    code[26].f = LOD; code[26].l = 0; code[26].a = 4; //
-    code[27].f = STO; code[27].l = 3; code[27].a = 4; //
-    code[28].f = OPR; code[28].l = 0; code[28].a = 0; // RETURN // soma-FIM
-
-    // Aqui vc chama a P-code machine para interpretar essas instrucoes
+    code[24].f = CAL; code[24].l = 0; code[24].a = 11;
+    code[25].f = JMP; code[25].l = 0; code[25].a = 28;
+    code[26].f = LOD; code[26].l = 0; code[26].a = 4;
+    code[27].f = STO; code[27].l = 3; code[27].a = 4;
+    code[28].f = OPR; code[28].l = 0; code[28].a = 0;
     pcodevhw();
     return 0;
 }
