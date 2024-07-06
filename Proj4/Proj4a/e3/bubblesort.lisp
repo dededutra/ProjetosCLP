@@ -13,7 +13,7 @@
             lista
             (bubble-sort troca)))))
 
-(defun ler-vetor ()
+(defun ler-lista ()
   (let ((lista ()))
     (format t "Digite os elementos da lista:~%")
     (loop
@@ -28,5 +28,5 @@
     (nreverse lista)))
 
 (progn
-  (format t "~a~%" (bubble-sort 'ler-vetor))
+  (format t "~a~%" (bubble-sort 'ler-lista))
 )
