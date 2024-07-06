@@ -20,7 +20,6 @@ public class proj1a {
     }
 
     public static void main(String[] args) {  
-        // Arrays para armazenar os tempos de processamento
         double[] processingTimes = new double[NUM];
 
         for (int i = 0; i < NUM; i++) {
