@@ -5,7 +5,6 @@
 #define TAM 100
 #define NUM 1024
 
-// Função para ordenação por inserção
 void insertionSort(int arr[], int n) {
     int i, key, j;
     for (i = 1; i < n; i++) {
